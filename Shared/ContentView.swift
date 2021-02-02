@@ -38,6 +38,7 @@ struct ContentView: View {
 				dismissButton: .default(Text("OK"))
 			)
 		}
+		.padding()
 	}
 }
 
