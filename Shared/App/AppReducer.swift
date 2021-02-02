@@ -12,6 +12,15 @@ typealias AppReducer = Reducer<AppState, AppAction, AppEnvironment>
 
 extension AppReducer {
 	static let main = Reducer { state, action, environment in
-		return .none
+		switch action {
+		case .showAlert:
+			state.alert = .init(title: "Hello", message: "World")
+			return .none
+
+		case .hideAlert:
+			state.alert = nil
+			return .none
+		}
 	}
+	.debug()
 }

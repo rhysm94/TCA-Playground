@@ -6,5 +6,6 @@
 //
 
 enum AppAction {
-
+	case showAlert
+	case hideAlert
 }

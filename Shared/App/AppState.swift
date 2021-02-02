@@ -7,6 +7,12 @@
 
 import Foundation
 
-struct AppState {
-	
+struct AppState: Equatable {
+	struct Alert: Equatable, Identifiable {
+		let id = UUID()
+		var title: String
+		var message: String
+	}
+
+	var alert: Alert?
 }
